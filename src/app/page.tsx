@@ -1,101 +1,68 @@
-import Image from "next/image";
+import React from 'react'
+import Header from './components/Header'
+import Image from 'next/image';
 
-export default function Home() {
+export default function page() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <Header />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="text-sky-900 body-font ml-10">
+        <div className="bg-[url('/images/back.jpeg')] w-full h-full bg-no-repeat bg-cover ">
+          <div className="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center">
+            <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+              <h1 className="whitespace-nowrap text-center text-[2rem] font-extrabold leading-10 tracking-wider text-main sm:text-5xl sm:leading-none md:text-left lg:text-6xl">
+                Governor Sindh
+              </h1>
+              <h1 className=" whitespace-nowrap text-center text-[1.5rem] font-normal leading-[2rem] tracking-wider  text-main sm:text-4xl sm:leading-[3rem] md:text-left lg:text-[2.5rem]">
+                Kamran Khan Tessori
+              </h1>
+              <h1 className="mt-5 text-sky-500 whitespace-nowrap text-center text-[1.5rem] font-extrabold leading-[2rem] tracking-wider  text-sub sm:text-4xl sm:leading-[3rem] md:text-left lg:text-[2.5rem]">
+                Certified Cloud
+                <br />
+                Applied Generative AI
+                <br />
+                Engineer (GenEng)
+              </h1>
+              <p className=" my-5 whitespace-nowrap text-center text-[1.25rem] font-extrabold text-main sm:text-2xl md:text-left">
+                Earn up to $5,000 / month
+              </p>
+              <p className="w-full text-center text-[1.25rem] font-extrabold tracking-wider text-main sm:text-2xl md:w-[80%] md:text-left">
+                Now admissions are open in Hyderabad
+              </p>
+              <div className="mb-7 mt-5 flex flex-col items-center sm:mt-5 sm:flex-row sm:gap-20 md:mb-0">
+                <a className="my-4 w-full md:w-auto" href="/apply">
+                  <button className="w-full rounded-md bg-sky-900 py-3 text-center text-sm font-semibold tracking-widest text-white transition-all hover:translate-y-1 sm:py-4 sm:text-base md:w-52">
+                    APPLY NOW
+                  </button>
+                </a>
+                <div className="mt-4 flex w-full flex-col items-center sm:mt-0">
+                  <div className="flex-col text-center text-xl tracking-widest text-main sm:text-3xl">
+                    <div className="w-40 font-extrabold">562,143</div>
+                  </div>
+                  <div className="text-center text-xs tracking-wider text-main sm:mb-0 sm:text-sm">
+                    Accepted Applications
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="lg:max-w-lg lg:w-full md:w-1/2">
+              <Image
+                alt="governer sindh"
+                loading="lazy"
+                width="1600"
+                height="1212"
+                decoding="async"
+                data-nimg="1"
+                className="h-full min-w-[900px] lg:w-[600px]"
+                src="/images/cover.1d863e39.png"
+              />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
     </div>
   );
 }
+
+
